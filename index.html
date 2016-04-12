@@ -4,16 +4,19 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header>
-		<h1>CITPAD</h1>
-	</header>
+	<div class="row">
+		<header class="col-12">
+			<h1>CITPAD</h1>
+		</header>
+	</div>
+	
 	<div id="content">
 		<p>Centro medico de Anorexia y Bulimia</p>
 		<button id="llamar">Llamar</button>
 		<br>
 		<br>
-		<div id="contact"><textarea rows="4" cols="50"></textarea>
-			<br><button id="enviar">Enviar</button></div>
+		<div id="contact"><textarea id="contactText" rows="4" cols="50"></textarea>
+			<br><button id="enviar" onclick="sendEmail()">Enviar</button></div>
 			<br>
 			<br>
 			<ul>
@@ -24,5 +27,48 @@
 			</ul>
 	</div>
 	<footer></footer>
+	<script type="text/javascript">
+		var baseURL = "http://"+document.domain+":8080"
+		function getNewXHRObject(){
+		  var xhr
+		  if (window.XMLHttpRequest) {
+		      xhr = new XMLHttpRequest()// code for IE7+, Firefox, Chrome, Opera, Safari
+		  } else {
+		      xhr = new ActiveXObject("Microsoft.XMLHTTP"); // code for IE6, IE5
+		    }
+		  return xhr;
+		}
+
+		function sendEmail(){
+			var url = baseURL+"/sendEmail"
+		    var body = document.getElementById("contactText")
+		    var params = "body="+body.value
+		    alert(params)
+		    var xhr = getNewXHRObject()
+		    xhr.open("POST", url, true)
+		    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		    xhr.send(params)
+		    xhr.onreadystatechange = function() {
+		      if (xhr.readyState == XMLHttpRequest.DONE ) {
+		         if(xhr.status == 200){
+		            var content = xhr.getResponseHeader("Content-Type")
+		            if(content == "application/json; charset=utf-8"){
+		              var json = JSON.parse(xhr.responseText)
+		              if(json.isERROR){
+		                user.addClass("error")
+		                pass.classList.add("error")
+		              }
+		            }else{
+		              alert("Email Enviado")
+		            }  
+		          }else if(xhr.status == 400) {
+		            alert('There was an error 400')
+		          }else {
+		            alert('something else other than 200 was returned')
+		        }
+		      }
+		    }
+		}
+	</script>
 </body>
 </html>
