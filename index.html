@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>CITPAD Centro medico de Anorexia y Bulimia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,16 +16,22 @@
 		<button id="llamar">Llamar</button>
 		<br>
 		<br>
-		<div id="contact"><textarea id="contactText" rows="4" cols="50"></textarea>
-			<br><button id="enviar" onclick="sendEmail()">Enviar</button></div>
-			<br>
-			<br>
-			<ul>
-				<li>lorem ipsum</li>
-				<li>lorem ipsum</li>
-				<li>lorem ipsum</li>
-				<li>lorem ipsum</li>
-			</ul>
+		<div class="row">
+			<div id="contact" class="col-4">
+				<textarea id="contactText"></textarea>
+				<br>
+				<button id="enviar" onclick="sendEmail()">Enviar</button>
+			</div>
+			<div class="col-8"></div>
+		</div>
+		<br>
+		<br>
+		<ul>
+			<li>lorem ipsum</li>
+			<li>lorem ipsum</li>
+			<li>lorem ipsum</li>
+			<li>lorem ipsum</li>
+		</ul>
 	</div>
 	<footer></footer>
 	<script type="text/javascript">
