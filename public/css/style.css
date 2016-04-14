@@ -29,13 +29,20 @@
 
 body{
 	margin: 0;
-	background-color: #FBF0F1 !important;
+	background: #fff url(/image/fondo1.gif) center 0px no-repeat;
 }
 header{
-	height: 120px;
-	background-color: black;
+	height: 100px;
+	background-color: #FFFFFF;
 	color: white;
 	font-size:80%;
+	padding: 15px;
+	border-bottom: 1px solid black;
+	background: #fff url(/image/logo1.png) 0px no-repeat;
+	background-size: 25% 50%;
+	-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 }
 #content p{
 	font-size: 360%;
