@@ -29,23 +29,33 @@
 
 body{
 	margin: 0;
-	background: #fff url(/image/fondo1.gif) center 0px no-repeat;
+	background: #fff url(/image/fondo1.gif) center -20px no-repeat;
 }
 header{
+	position: fixed;
+    margin-top: -24px;
 	height: 100px;
 	background-color: #FFFFFF;
 	color: white;
 	font-size:80%;
 	padding: 15px;
 	border-bottom: 1px solid black;
-	background: #fff url(/image/logo1.png) 0px no-repeat;
+	background: #fff url(/image/logo1.png) 15px no-repeat;
 	background-size: 25% 50%;
 	-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 	box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 }
+#content{
+	margin: 15px;
+	padding-top: 65px;
+}
 #content p{
-	font-size: 360%;
+	font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content ul{
+	font-size: 40%;
     font-family: Arial, Helvetica, sans-serif;
 }
 #llamar{
@@ -58,15 +68,17 @@ header{
 	text-align: center;
 }
 textarea{
-	height: 250px;
-    width: 700px;
-    margin-left: 150px;
+	height: 20%;
+    width: 100%;
 }
 #enviar{
-	height: 90px;
-    width: 250px;
-    font-size: 50px;
-    margin-left: 600px;
+	height: 4%;
+    width: 30%;
+    font-size:100%;
+    float:right;
+}
+#contact{
+	margin-top: 10%;
 }
 ul li{
 	font-size: 360%;
