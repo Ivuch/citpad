@@ -19,11 +19,12 @@
 	
 	<div id="content" class="row">
 		<div class="col-8">
+			<br>
 			<p>Institución médica especializada en <br><b>Trastornos de la Conducta Alimentaria.</b></p>
 			<!--<button id="llamar">Llamar</button>-->
 			<br>
 			<br>
-			<p>Ofrece tratamientos orientados al paciente para que logre acceder a nuevos patrones de conducta que le sean útiles para desarrollar sus potencialidades, sin enfermedad.</p>
+			<p style="font-size:100%">Ofrece tratamientos orientados al paciente para que logre acceder a nuevos patrones de conducta que le sean útiles para desarrollar sus potencialidades, sin enfermedad.</p>
 			<br>
 			<p><h2>Hospital de Día</h2>
 				<br>Tratamiento intensivo y estructurado para evitar la internación o sostener al paciente posterior a la misma.
@@ -49,9 +50,9 @@
 			<br>
 		</div>
 		<div id="contact" class="col-4">
-			<input type="name" required="true" placeholder="Nombre">
-			<input type="email" required="true" placeholder="E-mail">
-			<input type="tel" required="true" placeholder="Teléfono"> 
+			<input type="name" required="true" placeholder="Nombre" class="inputs" style="display:block;">
+			<input type="email" required="true" placeholder="E-mail" class="inputs" style="display:inline-block;">
+			<input type="tel" required="true" placeholder="Teléfono" class="inputs" style="display:inline-block;"> 
 			<!--nombre completo. required = true
 			email - required=true
 			telefono -->
@@ -59,27 +60,30 @@
 			<br>
 			<button id="enviar" onclick="sendEmail()">Enviar</button>
 		</div>
-		<div id="quienes_somos">
-			______________________________________________________________________________________________________________________________
-			<h1>Quienes somos - (gris muy oscuro)</h1> 
+		<div class="row">
+			<div id="quienes_somos" class="col-12">
+				______________________________________________________________________________________________________________________________
+				<h1>Quienes somos - (gris muy oscuro)</h1> 
+			
+			<br>
+			<br>
+			<ul>
+				<li><img src="/image/osde.png" style="height:8%"/></li>
+				<li><img src="/image/medicus.jpg" style="height:8%"/></li>
+				<li><img src="/image/lp.png" style="height:8%"/></li>
+				<li>lorem ipsum</li>
+				<li>lorem ipsum</li>
+			</ul>
+			</div>
 		</div>
-		<br>
-		<br>
-		<ul>
-			<li><img src="/image/osde.png" style="height:8%"/></li>
-			<li><img src="/image/medicus.jpg" style="height:8%"/></li>
-			<li><img src="/image/lp.png" style="height:8%"/></li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-		</ul>
-		<div id="donde_estamos">
+		<div id="donde_estamos" style="overflow:hidden">
 			______________________________________________________________________________________________________________________________
 			<h1>Donde estamos - (blanco)</h1> 
 			<h2>Iría google map / img map</h2>
 		</div>
 	</div>
 	<footer>
-		<div id="footer">
+		<div id="footer" style="overflow:hidden">
 			______________________________________________________________________________________________________________________________
 			<h1>Footer</h1>
 		</div>
@@ -126,6 +130,9 @@
 		      }
 		    }
 		}
+
+		alert("width: "+window.innerWidth)
+		alert("height: "+window.innerHeight)
 	</script>
 </body>
 </html>
