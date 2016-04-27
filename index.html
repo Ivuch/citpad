@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>CITPAD Centro medico de Anorexia y Bulimia</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div class="row">
 		<header class="col-12">
-			<div style="float:right; font-size:90%; color:grey; text-align:right; margin-top: 10px;">
+			<button onclick="openMsgModal()" id="msgBox" style="float:left;"></button>
+			<div id="info" style="float:right; font-size:90%; color:grey; text-align:right;">
 				Horario de Atenci&oacute;n Lun a Vie de 08 a 20 hs. <br>
 				S&aacute;nchez de Bustamante 923, CABA 
 				<br>Tel. 4863 7634/40
@@ -62,9 +63,7 @@
 		</div>
 		<div class="row">
 			<div id="quienes_somos" class="col-12">
-				______________________________________________________________________________________________________________________________
-				<h1>Quienes somos - (gris muy oscuro)</h1> 
-			
+				<h1>Quienes somos - (gris muy oscuro)</h1>
 			<br>
 			<br>
 			<ul>
@@ -76,15 +75,13 @@
 			</ul>
 			</div>
 		</div>
-		<div id="donde_estamos" style="overflow:hidden">
-			______________________________________________________________________________________________________________________________
+		<div id="donde_estamos">
 			<h1>Donde estamos - (blanco)</h1> 
 			<h2>Iría google map / img map</h2>
 		</div>
 	</div>
 	<footer>
-		<div id="footer" style="overflow:hidden">
-			______________________________________________________________________________________________________________________________
+		<div id="footer">
 			<h1>Footer</h1>
 		</div>
 	</footer>
