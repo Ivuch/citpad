@@ -6,6 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<div id="modal">
+		<div id="modalHead">
+			<span onclick="closeMsgModal()" class="close">x</span>
+		</div>
+	</div>
 	<div class="row">
 		<header class="col-12">
 			<button onclick="openMsgModal()" id="msgBox" style="float:left;"></button>
@@ -17,7 +22,6 @@
 			</div>
 		</header>
 	</div>
-	
 	<div id="content" class="row">
 		<div class="col-8">
 			<br>
@@ -127,9 +131,18 @@
 		      }
 		    }
 		}
+		var modal = document.getElementById('modal')
+		function openMsgModal(){
+			modal.setAttribute('style', 'visibility:initial;width:70%')
+		}
+		function closeMsgModal(){
+			modal.setAttribute('style', 'visibility: hidden;width:0px;')
+		}
 
+		/*
 		alert("width: "+window.innerWidth)
 		alert("height: "+window.innerHeight)
+		*/
 	</script>
 </body>
 </html>
