@@ -31,7 +31,7 @@ header{
 }
 body{
 	margin: 0;
-	background: #fff url(/image/fondo1.gif) center 20px no-repeat;
+	background: #fff url(/image/fondo1.png) center 20px no-repeat;
 	background-size: 156% 5%;
 }
 #content{
@@ -100,7 +100,7 @@ body{
 	}
 	body{
 		margin: 0;
-		background: #fff url(/image/fondo1.gif) center 45px no-repeat;
+		background: #fff url(/image/fondo1.png) center 45px no-repeat;
 	}
 	#content{
 		padding-top: 75px;
@@ -148,7 +148,7 @@ body{
 	}
 	body{
 		margin: 0;
-		background: #fff url(/image/fondo1.gif) center -20px no-repeat;
+		background: #fff url(/image/fondo1.png) center -20px no-repeat;
 	}
 	#msgBox{
 		display: none;
