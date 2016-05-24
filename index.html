@@ -6,14 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div id="modal">
-		<div id="modalHead">
-			<span onclick="closeMsgModal()" class="close">x</span>
-		</div>
-	</div>
-	<div class="row">
+	<section class="row">
 		<header class="col-12">
-			<button onclick="openMsgModal()" id="msgBox" style="float:left;"></button>
+			<p>C.I.T.P.A.D.</p>
 			<div id="info" style="float:right; font-size:90%; color:grey; text-align:right;">
 				Horario de Atenci&oacute;n Lun a Vie de 08 a 20 hs. <br>
 				S&aacute;nchez de Bustamante 923, CABA 
@@ -21,128 +16,48 @@
 				<br><a style=" font-size:100%;text-decoration:none; color:grey;" target="_blank" href="https://www.facebook.com/citpad.srl">FB-logo/Citpad.srl</a>
 			</div>
 		</header>
-	</div>
-	<div id="content" class="row">
-		<div class="col-7">
-			<br>
-			<p>Institución médica especializada en <br><b>Trastornos de la Conducta Alimentaria.</b></p>
-			<!--<button id="llamar">Llamar</button>-->
-			<br>
-			<br>
-			<p style="font-size:100%">Ofrece tratamientos orientados al paciente para que logre acceder a nuevos patrones de conducta que le sean útiles para desarrollar sus potencialidades, sin enfermedad.</p>
-			<br>
-			<p><h2>Hospital de Día</h2>
-				<br>Tratamiento intensivo y estructurado para evitar la internación o sostener al paciente posterior a la misma.
-				<ul>
-					<li>Esatabilidad clínica</li>
-					<li>Reordenamiento de pautas alimentarias</li>
-					<li>Conciencia de enfermedad</li>
-					<li>Evaluación constante</li>
-				</ul>
-				<br>
-				<h2>Tratamientos</h2>
-				<ul>	
-					<li>Evaluación, Diagnóstico y Orientación</li>
-					<li>Terapias Individuales y Grupales</li>
-					<li>Grupos de Ayuda mutua, de Orientación nutricional y de Seguimiento</li>
-					<li>Consultas nutricionales y de psiquiatría con tratamientos Biológicos y Psicofarmacológicos</li>
-					<li>Abordaje familiar: grupos para la familia del paciente para favorecer la comprensión y evolución de los TCA y su trato</li>
-					<li>Abordaje psicoeducacional: psicopedagogía, orientación vocacional, talleres dirigidos</li>
-					<li>Abordaje psiconutricional: grupos y apoyo nutricional</li>
-				</ul>
-			</p>
-			<br>
-			<br>
-		</div>
-		<div id="contact" class="col-5">
-			<input type="name" required="true" placeholder="Nombre" class="inputs" style="display:block;">
-			<input type="email" required="true" placeholder="E-mail" class="inputs" style="display:inline-block;">
-			<input type="tel" required="true" placeholder="Teléfono" class="inputs" style="display:inline-block;"> 
-			<!--nombre completo. required = true
-			email - required=true
-			telefono -->
-			<textarea id="contactText"></textarea>
-			<br>
-			<button id="enviar" onclick="sendEmail()">Enviar</button>
+	</section>
+	<section id="content">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-10" style="padding:0"><img src="/image/05-foto.png"></div>
+			<div class="col-1"></div>
 		</div>
 		<div class="row">
-			<div id="quienes_somos" class="col-12">
-				<h1>Quienes somos - (gris muy oscuro)</h1>
-			<br>
-			<br>
-			<ul>
-				<li><img src="/image/osde.png" style="height:8%"/></li>
-				<li><img src="/image/medicus.jpg" style="height:8%"/></li>
-				<li><img src="/image/lp.png" style="height:8%"/></li>
-				<li>lorem ipsum</li>
-				<li>lorem ipsum</li>
-			</ul>
+			<div class="col-1"></div>
+			<div class="col-10">
+				<div class="col-4 msgBox"></div>
+				<div class="col-4"></div>
+				<div class="col-4"></div>
 			</div>
+			<div class="col-1"></div>
 		</div>
-		<div id="donde_estamos">
-			<h1>Donde estamos - (blanco)</h1> 
-			<h2>Iría google map / img map</h2>
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-10">
+				<div class="col-5">
+					<p>Dejanos tu mensaje</p>
+					<input type="name" required="true" placeholder="NOMBRE" class="inputs" style="display:block;">
+					<input type="email" required="true" placeholder="MAIL" class="inputs" style="display:inline-block;">
+					<textarea id="contactText" placeholder="MENSAJE"></textarea>
+					<br>
+					<button id="enviar" onclick="sendEmail()">Enviar</button>
+				</div>
+				<div class="col-7"></div>
+			</div>
+			<div class="col-1"></div>
 		</div>
-	</div>
-	<footer>
-		<div id="footer">
-			<h1>Footer</h1>
+	</section>
+	<footer class="row">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-10">
+				<div class="col-4"><img src="/image/01-mail.png"></div>
+				<div class="col-4"><img src="/image/02-telefono.png"></div>
+				<div class="col-4"><img src="/image/03-casa.png"></div>
+			</div>
+			<div class="col-1"></div>
 		</div>
 	</footer>
-	<script type="text/javascript">
-		var baseURL = "http://"+document.domain+":8080"
-		function getNewXHRObject(){
-		  var xhr
-		  if (window.XMLHttpRequest) {
-		      xhr = new XMLHttpRequest()// code for IE7+, Firefox, Chrome, Opera, Safari
-		  } else {
-		      xhr = new ActiveXObject("Microsoft.XMLHTTP"); // code for IE6, IE5
-		    }
-		  return xhr;
-		}
-
-		function sendEmail(){
-			var url = baseURL+"/sendEmail"
-		    var body = document.getElementById("contactText")
-		    var params = "body="+body.value
-		    alert(params)
-		    var xhr = getNewXHRObject()
-		    xhr.open("POST", url, true)
-		    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		    xhr.send(params)
-		    xhr.onreadystatechange = function() {
-		      if (xhr.readyState == XMLHttpRequest.DONE ) {
-		         if(xhr.status == 200){
-		            var content = xhr.getResponseHeader("Content-Type")
-		            if(content == "application/json; charset=utf-8"){
-		              var json = JSON.parse(xhr.responseText)
-		              if(json.isERROR){
-		                user.addClass("error")
-		                pass.classList.add("error")
-		              }
-		            }else{
-		              alert("Email Enviado")
-		            }  
-		          }else if(xhr.status == 400) {
-		            alert('There was an error 400')
-		          }else {
-		            alert('something else other than 200 was returned')
-		        }
-		      }
-		    }
-		}
-		var modal = document.getElementById('modal')
-		function openMsgModal(){
-			modal.setAttribute('style', 'visibility:initial;width:70%')
-		}
-		function closeMsgModal(){
-			modal.setAttribute('style', 'visibility: hidden;width:0px;')
-		}
-
-		/*
-		alert("width: "+window.innerWidth)
-		alert("height: "+window.innerHeight)
-		*/
-	</script>
 </body>
 </html>
