@@ -30,7 +30,9 @@
 		height: 95px;
 		background-color: #FFFFFF;
 		color: black;
-		font-size:80%;
+		font-family: gotLight;
+		padding-left: 100px;
+		font-size:290%;
 		padding: 15px;
 		border-bottom: 1px solid black;
 		background-size: 25% 50%;
@@ -73,9 +75,20 @@ img {
     padding:0;
     border: 1px solid red;
 }
-.col-4 img{
-	width: 23%;
+.contact{
+	position:relative;
+	top: 15px;
+}
+.contact img{
+	width: 15%;
     height: 50px;
+    display: inline-block;
+}
+.contact p{
+	display: inline-block;
+	overflow: hidden;
+    font-family: gotMedium;
+    font-size: 64%;
 }
 
 .msgBox{
@@ -88,3 +101,17 @@ img {
     clear: both;
     display: block;
 }
+
+
+/***** FONTS *****/
+@font-face{
+    font-family: gotMedium;
+    src: url(fonts/GothamRounded-Medium.otf);
+}
+
+@font-face{
+    font-family: gotLight;
+    src: url(fonts/GothamRounded-Light.otf);
+}
+
+/***** FONTS *****/
