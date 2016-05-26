@@ -58,9 +58,13 @@
 }
 /***   Desktop    ***/
 
+h3{
+	color: #AEA56F;
+}
 footer{
 	background-color: #6E6E6E;
 	height: 95px;
+	color: white;
 }
 img {
     width: 100%;
