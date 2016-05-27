@@ -8,7 +8,7 @@
 <body>
 	<section class="row">
 		<header class="col-12">
-			<p style="padding: 20px 175px;margin:0;display: inline-block;">C.I.T.P.A.D.</p>
+			<p id="logo">C.I.T.P.A.D.</p>
 			<div id="info" style="float:right; font-size:26%; color:black; text-align:right; padding: 30px 150px;"><b>
 				48637634 | citpadsrl@gmail.com | S&aacute;nchez de Bustamante 923<br>
 				Ciudad Autónoma de Buenos Aires, Argentina | CP 1173</b>
@@ -39,11 +39,9 @@
 					<h3>Servicios Adicionales</h3>
 					<p><b>Abordaje Familiar:</b><br>
 					tratamientos para la familia del paciente <br>para favorecer la comprensión y evolución <br>de la patología alimentaria y su trato.</p>
-					<br>
-					<p><b>Abordaje Psicoeducacional:</b><br>
+					<p><b>Abordaje Psicoeducacional:</b>
 					psicopedagogía, orientación vocacional, <br>talleres dirigidos.
 					</p>
-					<br>
 					<p><b>Abordaje Psiconutricional.</b></p>
 				</div>
 			</div>
@@ -54,11 +52,11 @@
 			<div class="col-10" style="border-top: 2px dotted gray">
 				<div class="col-5">
 					<h3>Dejanos tu mensaje</h3>
-					<input type="name" required="true" placeholder="NOMBRE" class="inputs" style="display:block;">
-					<input type="email" required="true" placeholder="MAIL" class="inputs" style="display:inline-block;">
+					<input type="name" required="true" placeholder="NOMBRE" class="inputs" style="display:block; margin: 5px; width: 85%; padding:5px;">
+					<input type="email" required="true" placeholder="MAIL" class="inputs" style="display:inline-block; margin: 5px; width: 85%; padding:5px;">
 					<textarea id="contactText" placeholder="MENSAJE"></textarea>
 					<br>
-					<button id="enviar" onclick="sendEmail()">Enviar</button>
+					<button id="enviar" onclick="sendEmail()" style="float: right;">Enviar</button>
 				</div>
 				<div class="col-7">
 					<h3>Cómo llegar</h3>
@@ -88,6 +86,11 @@
 			<div class="col-1"></div>
 		</div>
 	</footer>
-	Mamá Naturaleza dijo: "Toma lo que quieras, pero nada es tuyo hijo..." - y tu dibujaste fronteras
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded",function(){
+			alert(window.innerWidth)
+		})
+		</script>
+	<p style="display:none">Mamá Naturaleza dijo: "Toma lo que quieras, pero nada es tuyo hijo..." - y tu dibujaste fronteras</p>
 </body>
 </html>

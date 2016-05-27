@@ -1,8 +1,35 @@
 * {box-sizing: border-box;}
 
+/***   MOBILE FIRST   ***/
 [class*="col-"] {
     width: 100%;
 }
+
+body{
+	margin: 0;
+	background-color: #F6F6F6;
+}
+
+header{
+	position: fixed;
+	height: 55px;
+	background-color: #FFFFFF;
+	color: black;
+	text-align: center;
+	font-family: gotLight;
+	font-size:180%;
+	border-bottom: 1px solid black;
+	background-size: 25% 50%;
+	-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
+}
+#logo{
+	padding:11px 0 0 25px;
+	margin:0;
+	display: inline-block;
+}
+/***   MOBILE FIRST   ***/
 
 /***   Desktop    ***/
 @media only screen and (min-width: 950px){
@@ -22,7 +49,7 @@
 	[class*="col-"] {
 	    float: left;
 	    padding: 1px;
-	    border: 1px solid red;
+	    /*border: 1px solid red;*/
 	}
 
 	header{
@@ -41,13 +68,12 @@
 		box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 	}
 
-	#content{
-		padding-top: 95px;
+	#logo{
+		padding: 20px 175px;
 	}
 
-	body{
-		margin: 0;
-		background-color: #F6F6F6;
+	#content{
+		padding-top: 95px;
 	}
 
 	#msgBox{
@@ -73,7 +99,7 @@ img {
     height: auto;
     margin: 0;
     padding:0;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .contact{
 	position:relative;
@@ -91,10 +117,17 @@ img {
     font-size: 64%;
 }
 
+#contactText{
+	margin: 5px;
+	height: 284px;
+    width: 85%;
+    padding:5px;
+}
 .msgBox{
 	height: 180px;
 	background-color: white;
 }
+
 
 .row:after {
     content: "";
