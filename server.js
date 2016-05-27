@@ -44,6 +44,10 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname+"/index.html")
 })
 
+app.get('/index2', function(req, res){
+	res.sendFile(__dirname+"/index2.html")
+})
+
 var server = http.listen(8080, function(){
 	
 	var port = server.address().port

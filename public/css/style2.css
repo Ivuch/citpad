@@ -11,7 +11,7 @@ header{
 	font-size:80%;
 	padding: 15px;
 	border-bottom: 1px solid black;
-	background: #fff url(/image/logo1.png) 15px no-repeat;
+	background: #fff url(/images2/logo1.png) 15px no-repeat;
 	background-position: center; 
 	background-size: 43% 46%;
 	-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
@@ -19,7 +19,7 @@ header{
 	box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 }
 #msgBox{
-	background: #fff url(/image/mail_32.svg) 15px no-repeat;
+	background: #fff url(/images2/mail_32.svg) 15px no-repeat;
 	background-position: center; 
 	margin-left: 3%;
 	height: 100%;
@@ -31,7 +31,7 @@ header{
 }
 body{
 	margin: 0;
-	background: #fff url(/image/fondo1.png) center 20px no-repeat;
+	background: #fff url(/images2/fondo1.png) center 20px no-repeat;
 	background-size: 156% 5%;
 }
 #content{
@@ -53,7 +53,7 @@ body{
 #modalHead{
 	height: 55px;
 	padding-left: 4px;
-	background: black url(/image/logoW.png) no-repeat;
+	background: black url(/images2/logoW.png) no-repeat;
 	background-position: 10%; 
 	background-size: 53% 36%;
 	-webkit-box-shadow: 0px 3px 9px 1px white;
@@ -82,7 +82,7 @@ body{
 		font-size:80%;
 		padding: 15px;
 		border-bottom: 1px solid black;
-		background: #fff url(/image/logo1.png) 0px no-repeat;
+		background: #fff url(/images2/logo1.png) 0px no-repeat;
 		background-position: center; 
 		background-size: 33% 46%;
 		-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
@@ -90,7 +90,7 @@ body{
 		box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 	}
 	#msgBox{
-		background: #fff url(/image/mail_32.svg) 15px no-repeat;
+		background: #fff url(/images2/mail_32.svg) 15px no-repeat;
 		background-position: center; 
 		margin-left: 7%;
 		margin-top: 1%;
@@ -100,7 +100,7 @@ body{
 	}
 	body{
 		margin: 0;
-		background: #fff url(/image/fondo1.png) center 45px no-repeat;
+		background: #fff url(/images2/fondo1.png) center 45px no-repeat;
 	}
 	#content{
 		padding-top: 75px;
@@ -137,7 +137,7 @@ body{
 		font-size:80%;
 		padding: 15px;
 		border-bottom: 1px solid black;
-		background: #fff url(/image/logo1.png) 15px no-repeat;
+		background: #fff url(/images2/logo1.png) 15px no-repeat;
 		background-size: 25% 50%;
 		-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
@@ -148,7 +148,7 @@ body{
 	}
 	body{
 		margin: 0;
-		background: #fff url(/image/fondo1.png) center -20px no-repeat;
+		background: #fff url(/images2/fondo1.png) center -20px no-repeat;
 	}
 	#msgBox{
 		display: none;
