@@ -71,9 +71,9 @@
 			<br>
 			<br>
 			<ul>
-				<li><img src="/image/osde.png" style="height:8%"/></li>
-				<li><img src="/image/medicus.jpg" style="height:8%"/></li>
-				<li><img src="/image/lp.png" style="height:8%"/></li>
+				<li><img src="/images2/osde.png" style="height:8%"/></li>
+				<li><img src="/images2/medicus.jpg" style="height:8%"/></li>
+				<li><img src="/images2/lp.png" style="height:8%"/></li>
 				<li>lorem ipsum</li>
 				<li>lorem ipsum</li>
 			</ul>
@@ -90,6 +90,27 @@
 		</div>
 	</footer>
 	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded",function(){
+		    if (window.XMLHttpRequest) xhr = new XMLHttpRequest();
+		    else xhr = new ActiveXObject("Microsoft.XMLHTTP");
+
+		    xhr.open("GET",baseURL+"/ip",true);
+		    /*
+		    xmlhttp.setRequestHeader('Access-Control-Allow-Headers', '*')
+		    */
+		    xhr.send();
+		    xhr.onreadystatechange = function() {
+			    if (xhr.readyState == XMLHttpRequest.DONE ) {
+			       if(xhr.status == 200){
+			            var json = JSON.parse(xhr.responseText)
+			          	if(window.innerWidth>=950){
+							alert("Si estás aquí, visita esta página desde tu celular! : \n\n http://"+json.ip+":8080/index2")
+						}
+					}
+				}
+			}		
+		})
+
 		var baseURL = "http://"+document.domain+":8080"
 		function getNewXHRObject(){
 		  var xhr
