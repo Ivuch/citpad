@@ -57,15 +57,15 @@
 		<div class="row">
 			<div class="col-1"></div>
 			<div class="col-10" style="border-top: 2px dotted gray; padding: 60px 0 60px 0;">
-				<div class="col-5">
+				<div class="col-5 rightDottedBorder box">
 					<h3>Dejanos tu mensaje</h3>
-					<input type="name" required="true" placeholder="NOMBRE" class="inputs" style="display:block; margin: 5px; width: 85%; padding:5px;">
-					<input type="email" required="true" placeholder="MAIL" class="inputs" style="display:inline-block; margin: 5px; width: 85%; padding:5px;">
-					<textarea placeholder="MENSAJE"></textarea>
+					<input type="name" required="true" placeholder="NOMBRE" class="inputs">
+					<input type="email" required="true" placeholder="MAIL" class="inputs">
+					<textarea placeholder="MENSAJE" class="inputs"></textarea>
 					<br>
 					<button id="enviar" onclick="sendEmail()" style="float: right;margin-right:65px;">Enviar</button>
 				</div>
-				<div class="col-7">
+				<div class="col-7 box-2" style="">
 					<h3>Cómo llegar</h3>
 					<img src="images/04-mapa.png">
 				</div>
@@ -74,28 +74,26 @@
 		</div>
 	</section>
 	<footer class="row">
-		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-10">
-				<div class="col-4 contact">
-					<img src="/images/01-mail.png">
-					<p style="padding-bottom:7px;">citpadsrl@gmail.com</p>
-				</div>
-				<div class="col-4 contact">
-					<img src="/images/02-telefono.png">
-					<p style="padding-bottom:5px;">4863-7634</p>
-				</div>
-				<div class="col-4 contact">
-					<img src="/images/03-casa.png">
-					<p>Sánchez de Bustamante 923 <br>Ciudad Autónoma de Buenos Aires, Argentina | CP 1173</p>
-				</div>
+		<div class="col-1"></div>
+		<div class="col-10">
+			<div class="col-4 contact">
+				<img src="/images/01-mail.png">
+				<p style="padding-bottom:7px;">citpadsrl@gmail.com</p>
 			</div>
-			<div class="col-1"></div>
+			<div class="col-4 contact">
+				<img src="/images/02-telefono.png">
+				<p style="padding-bottom:5px;">4863-7634</p>
+			</div>
+			<div class="col-4 contact">
+				<img src="/images/03-casa.png">
+				<p>Sánchez de Bustamante 923 <br>Ciudad Autónoma de Buenos Aires, Argentina | CP 1173</p>
+			</div>
 		</div>
+		<div class="col-1"></div>
 	</footer>
 	<script type="text/javascript">
 		document.addEventListener("DOMContentLoaded",function(){
-			//alert(window.innerWidth)
+			alert(window.innerWidth)
 		})
 	</script>
 	<p style="display:none">Mamá Naturaleza dijo: "Toma lo que quieras, pero nada es tuyo hijo..." - y tu dibujaste fronteras</p>

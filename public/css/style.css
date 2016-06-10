@@ -1,5 +1,11 @@
 * {box-sizing: border-box;}
 
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 /***   MOBILE FIRST   ***/
 [class*="col-"] {
     width: 100%;
@@ -41,6 +47,7 @@ header{
 h3{
 	color: #AEA56F;
 	margin-top:0;
+	font-size: 160%;
 }
 footer{
 	background-color: #6E6E6E;
@@ -66,17 +73,34 @@ img {
     font-family: gotMedium;
     font-size: 64%;
 }
-
+.inputs{
+	display:block;
+	margin: 5px; 
+	width: 90%; 
+	padding:5px;
+}
 textarea{
-	margin: 5px;
 	height: 284px;
-    width: 85%;
-    padding:5px;
 }
 .msgBox{
 	margin: 0 10px 10px 10px;
 	height: 280px;
 	background-color: white;
+	font-family: officinaSansStd;
+	padding: 20px 0 10px 20px;
+	line-height: 115%;
+}
+.msgBox p{
+	font-family: gotLight;
+	font-size: 90%;
+}
+.box{
+	margin:  0 10px 10px 10px;
+}
+.box-2{
+	margin:  40px 10px 10px 0;
+	padding: 20px;
+	border-top: 2px dotted gray;
 }
 /***   MOBILE FIRST   ***/
 
@@ -146,10 +170,6 @@ textarea{
 	#info{
 		display: initial;
 	}
-	h3{
-		color: #AEA56F;
-		margin-top:0;
-	}
 	footer{
 		background-color: #6E6E6E;
 		height: 95px;
@@ -171,34 +191,20 @@ textarea{
 	    height: 50px;
 	    display: inline-block;
 	}
-	.contact p{
-		display: inline-block;
-		overflow: hidden;
-	    font-family: gotMedium;
-	    font-size: 64%;
+	.rightDottedBorder{
+		border-right: 2px dotted gray;
 	}
-	textarea{
-		margin: 5px;
-		height: 284px;
-	    width: 85%;
-	    padding:5px;
+	.box{
+		margin: 0;
 	}
-	.msgBox{
-		margin: 0 10px 10px 10px;
-		height: 280px;
-		background-color: white;
+	.box-2{
+		margin: 0;
+		padding-left: 34px;
+		border:0;
 	}
 }
 /***   Desktop    ***/
 
-
-
-
-.row:after {
-    content: "";
-    clear: both;
-    display: block;
-}
 
 
 /***** FONTS *****/
@@ -212,4 +218,8 @@ textarea{
     src: url(fonts/GothamRounded-Light.otf);
 }
 
+@font-face{
+	font-family: officinaSansStd;
+	src: url(fonts/OfficinaSansStd-Bold.otf);
+}
 /***** FONTS *****/
