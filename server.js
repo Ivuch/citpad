@@ -29,8 +29,8 @@ var transporter = nodemailer.createTransport(smtpConfig)
 
 app.post('/sendEmail', function(req, res){
 	var mailOptions = {
-	    from: '"Ivuch" <ivuch@kong.com>', // sender address
-	    to: 'ivan.matellan@hotmail.com, maximatellan@gmail.com', // list of receivers
+	    from: '"CitpadWeb"', // sender address
+	    to: 'citpadsrl@gmail.com, citpad.adm@gmail.com', // list of receivers
 	    subject: 'Hello ✔', // Subject line
 	    text: req.body.body // plaintext body
 	};
