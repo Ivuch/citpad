@@ -1,5 +1,11 @@
 * {box-sizing: border-box;}
 
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 /***   MOBILE FIRST   ***/
 [class*="col-"] {
     width: 100%;
@@ -29,7 +35,82 @@ header{
 	margin:0;
 	display: inline-block;
 }
+#info{
+	display: none;
+}
+
+#content{
+	padding-top:55px;
+}
+
+
+h3{
+	color: #AEA56F;
+	margin-top:0;
+	font-size: 160%;
+}
+footer{
+	background-color: #6E6E6E;
+	height: 100%;
+	color: white;
+	overflow-y: ;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding:0;
+    /*border: 1px solid red;*/
+}
+.contact img{
+	width: 7%;
+    height: auto;
+    display: inline-block;
+}
+.contact p{
+	display: inline-block;
+	overflow: hidden;
+    font-family: gotMedium;
+    font-size: 64%;
+}
+.inputs{
+	display:block;
+	margin: 5px; 
+	width: 90%; 
+	padding:5px;
+}
+textarea{
+	height: 284px;
+}
+.msgBox{
+	margin: 0 10px 10px 10px;
+	height: 280px;
+	background-color: white;
+	font-family: officinaSansStd;
+	padding: 20px 0 10px 20px;
+	line-height: 115%;
+}
+.msgBox p{
+	font-family: gotLight;
+	font-size: 90%;
+}
+.box{
+	margin:  0 10px 10px 10px;
+}
+.box-2{
+	margin:  40px 10px 10px 0;
+	padding: 20px;
+	border-top: 2px dotted gray;
+}
 /***   MOBILE FIRST   ***/
+
+
+/***   TABLET   ***/
+@media only screen and (min-width: 720px){
+
+}
+/***   TABLET   ***/
+
 
 /***   Desktop    ***/
 @media only screen and (min-width: 950px){
@@ -67,9 +148,15 @@ header{
 		-moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 		box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 	}
-
 	#logo{
 		padding: 20px 175px;
+	}
+	#info{
+		float:right; 
+		font-size:26%; 
+		color:black; 
+		text-align:right; 
+		padding: 30px 150px;
 	}
 
 	#content{
@@ -83,57 +170,41 @@ header{
 	#info{
 		display: initial;
 	}
+	footer{
+		background-color: #6E6E6E;
+		height: 95px;
+		color: white;
+	}
+	img {
+	    width: 100%;
+	    height: auto;
+	    margin: 0;
+	    padding:0;
+	    /*border: 1px solid red;*/
+	}
+	.contact{
+		position:relative;
+		top: 15px;
+	}
+	.contact img{
+		width: 15%;
+	    height: 50px;
+	    display: inline-block;
+	}
+	.rightDottedBorder{
+		border-right: 2px dotted gray;
+	}
+	.box{
+		margin: 0;
+	}
+	.box-2{
+		margin: 0;
+		padding-left: 34px;
+		border:0;
+	}
 }
 /***   Desktop    ***/
 
-h3{
-	color: #AEA56F;
-}
-footer{
-	background-color: #6E6E6E;
-	height: 95px;
-	color: white;
-}
-img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding:0;
-    /*border: 1px solid red;*/
-}
-.contact{
-	position:relative;
-	top: 15px;
-}
-.contact img{
-	width: 15%;
-    height: 50px;
-    display: inline-block;
-}
-.contact p{
-	display: inline-block;
-	overflow: hidden;
-    font-family: gotMedium;
-    font-size: 64%;
-}
-
-#contactText{
-	margin: 5px;
-	height: 284px;
-    width: 85%;
-    padding:5px;
-}
-.msgBox{
-	height: 180px;
-	background-color: white;
-}
-
-
-.row:after {
-    content: "";
-    clear: both;
-    display: block;
-}
 
 
 /***** FONTS *****/
@@ -147,4 +218,8 @@ img {
     src: url(fonts/GothamRounded-Light.otf);
 }
 
+@font-face{
+	font-family: officinaSansStd;
+	src: url(fonts/OfficinaSansStd-Bold.otf);
+}
 /***** FONTS *****/
