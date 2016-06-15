@@ -17,8 +17,8 @@ var smtpConfig = {
     host: 'smtp.gmail.com',
     port: 465,
     auth: {
-        user: 'ivan.matellan@snoopconsulting.com',
-        pass: 'asdediamante123'
+        user: 'citpad.adm@gmail.com',
+        pass: 'citpadadministracion123'
     }
 }
 var transporter = nodemailer.createTransport(smtpConfig)
@@ -27,7 +27,7 @@ app.post('/sendEmail', function(req, res){
 	var mailBody = "Nombre:   "+req.body.name+"\n\nEmail:    "+req.body.email+"\n\nMensaje:  "+req.body.body
 	var mailOptions = {
 	    from: '"CitpadWeb"', // sender address
-	    to: ' ivan.matellan@hotmail.com', // list of receivers: citpadsrl@gmail.com, citpad.adm@gmail.com,
+	    to: 'citpadsrl@gmail.com, citpad.adm@gmail.com, ivan.matellan@snoopconsulting.com', // list of receivers:
 	    subject: 'Contacto desde Citpad-Web ✔', // Subject line
 	    text: mailBody // plaintext body
 	};
@@ -48,7 +48,7 @@ app.get('/', function(req, res){
 })
 
 
-var server = http.listen(8080, function(){
+var server = http.listen(80, function(){
 	
 	var port = server.address().port
 	console.log("Server Running in http://127.0.0.1:"+port)
