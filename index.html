@@ -8,7 +8,6 @@
 <body>
 	<section class="row">
 		<header class="col-12">
-			<p id="logo">C.I.T.P.A.D.</p>
 			<div id="info"><b>
 				4863-7634 | citpadsrl@gmail.com | S&aacute;nchez de Bustamante 923<br>
 				Ciudad Autónoma de Buenos Aires, Argentina | CP 1173</b>
@@ -59,11 +58,10 @@
 			<div class="col-10" style="border-top: 2px dotted gray; padding: 60px 0 60px 0;">
 				<div class="col-5 rightDottedBorder box">
 					<h3>Dejanos tu mensaje</h3>
-					<input type="name" required="true" placeholder="NOMBRE" class="inputs">
-					<input type="email" required="true" placeholder="MAIL" class="inputs">
-					<textarea placeholder="MENSAJE" class="inputs"></textarea>
-					<br>
-					<button id="enviar" onclick="sendEmail()" style="float: right;margin-right:65px;">Enviar</button>
+					<input type="name" required="true" placeholder="NOMBRE" id="name" class="inputs">
+					<input type="email" required="true" placeholder="MAIL" id="email" class="inputs">
+					<textarea placeholder="MENSAJE" id="contactText" class="inputs"></textarea>
+					<button id="enviar" onclick="sendEmail()">ENVIAR</button>
 				</div>
 				<div class="col-7 box-2" style="">
 					<h3>Cómo llegar</h3>

@@ -82,6 +82,15 @@ img {
 textarea{
 	height: 284px;
 }
+#enviar{
+	background-color: #AEA56F;
+	border: none;
+    color: white;
+    float: right;
+    margin: 8px 40px 0 0;
+    height: 30px;
+    width: 30%;
+}
 .msgBox{
 	margin: 0 10px 10px 10px;
 	height: 280px;
@@ -142,14 +151,12 @@ textarea{
 		padding-left: 100px;
 		font-size:290%;
 		padding: 15px;
+		background: #fff url(/images/logo1.png) 95px no-repeat;
 		border-bottom: 1px solid black;
 		background-size: 25% 50%;
 		-webkit-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
 		box-shadow: 0px 3px 9px 1px rgba(0,0,0,0.75);
-	}
-	#logo{
-		padding: 20px 175px;
 	}
 	#info{
 		float:right; 
