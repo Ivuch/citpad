@@ -18,7 +18,7 @@ var smtpConfig = {
     port: 465,
     auth: {
         user: 'ivan.matellan@snoopconsulting.com',
-        pass: 'sinagoga123'
+        pass: 'asdediamante123'
     }
 }
 var transporter = nodemailer.createTransport(smtpConfig)
@@ -26,7 +26,7 @@ var transporter = nodemailer.createTransport(smtpConfig)
 app.post('/sendEmail', function(req, res){
 	var mailOptions = {
 	    from: '"CitpadWeb"', // sender address
-	    to: 'citpadsrl@gmail.com, citpad.adm@gmail.com', // list of receivers
+	    to: 'citpadsrl@gmail.com, citpad.adm@gmail.com, ivan.matellan@hotmail.com', // list of receivers
 	    subject: 'Hello ✔', // Subject line
 	    text: req.body.body // plaintext body
 	};
@@ -49,7 +49,7 @@ app.get('/index2', function(req, res){
 })
 
 
-var server = http.listen(8080, function(){
+var server = http.listen(80, function(){
 	
 	var port = server.address().port
 	console.log("Server Running in http://127.0.0.1:"+port)
