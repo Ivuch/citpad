@@ -31,8 +31,8 @@ function sendEmail(){
               if(json.success){
                 alert(json.info)
                 document.getElementById("name").value = ""
-				document.getElementById("email").value = ""
-   				document.getElementById("contactText").value = ""
+      			   	document.getElementById("email").value = ""
+         				document.getElementById("contactText").value = ""
               }else if(!json.success){
               	alert(json.info)
               }

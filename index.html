@@ -58,10 +58,12 @@
 			<div class="col-10" style="border-top: 2px dotted gray; padding: 60px 0 60px 0;">
 				<div class="col-5 rightDottedBorder box">
 					<h3>Dejanos tu mensaje</h3>
-					<input type="name" required="true" placeholder="NOMBRE" id="name" class="inputs">
-					<input type="email" required="true" placeholder="MAIL" id="email" class="inputs">
-					<textarea placeholder="MENSAJE" id="contactText" class="inputs"></textarea>
-					<button id="enviar" onclick="sendEmail()">ENVIAR</button>
+					<form onsubmit="sendEmail();return false">
+						<input type="name" placeholder="NOMBRE" id="name" class="inputs">
+						<input type="email" required="true" placeholder="MAIL" id="email" class="inputs">
+						<textarea placeholder="MENSAJE" id="contactText" class="inputs"></textarea>
+						<input type="submit" value="ENVIAR" id="enviar">
+					</form>
 				</div>
 				<div class="col-7 box-2" style="">
 					<h3>Cómo llegar</h3>
