@@ -112,6 +112,10 @@ textarea{
 	padding: 20px;
 	border-top: 2px dotted gray;
 }
+
+.error{
+	border: 1px solid red; 
+}
 /***   MOBILE FIRST   ***/
 
 

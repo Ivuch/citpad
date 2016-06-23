@@ -27,7 +27,7 @@ app.post('/sendEmail', function(req, res){
 	var mailBody = "Nombre:   "+req.body.name+"\n\nEmail:    "+req.body.email+"\n\nMensaje:  "+req.body.body
 	var mailOptions = {
 	    from: '"CitpadWeb"', // sender address
-	    to: 'citpadsrl@gmail.com, citpad.adm@gmail.com, ivan.matellan@snoopconsulting.com', // list of receivers:
+	    to: 'citpadsrl@gmail.com, citpad.adm@gmail.com', // list of receivers: 
 	    subject: 'Contacto desde Citpad-Web ✔', // Subject line
 	    text: mailBody // plaintext body
 	};
