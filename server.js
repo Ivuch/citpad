@@ -1,8 +1,10 @@
 var express = require("express")
 var app = express()
-var http = require('http').Server(app)
+var http = require('http')
+var https = require('https')
 var bodyParser = require('body-parser')
 var nodemailer = require('nodemailer')
+var fs = require("fs")
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
@@ -47,11 +49,31 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname+"/index.html")
 })
 
+app.get('/tlccas', function(req, res){
+	res.sendFile(__dirname+"/test.html")
+})
 
+http.createServer(function (req, res) {
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
+}).listen(80);
+
+/*
 var server = http.listen(80, function(){
 	
 	var port = server.address().port
 	console.log("Server Running in http://127.0.0.1:"+port)
 	console.log("Base dir: "+__dirname)
+})
+*/
+
+var options = {
+	key: fs.readFileSync('/etc/letsencrypt/live/www.citpad.com.ar/privkey.pem'),
+  	cert: fs.readFileSync('/etc/letsencrypt/live/www.citpad.com.ar/fullchain.pem'),
+  	ca: fs.readFileSync('/etc/letsencrypt/live/www.citpad.com.ar/chain.pem')
+}
+
+var sserver = https.createServer(options, app).listen(443, function(){
+	console.log("Secure conction Established - HTTPS - SSL")
 })
 
