@@ -55,8 +55,8 @@ app.get('/tlccas', function(req, res){
 
 //Set port 80 for production, 8080 for dev
 http.createServer(function (req, res) {
-   // res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-   // res.end();
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
 }).listen(80);
 
 /*
@@ -82,8 +82,7 @@ var options = {
 */
 
 //Set por 443 for production, 4443 for dev
-/*
 var sserver = https.createServer(options, app).listen(443, function(){
 	console.log("Secure conction Established - HTTPS - SSL")
 })
-*/
+
