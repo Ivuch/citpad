@@ -53,6 +53,7 @@ app.get('/tlccas', function(req, res){
 	res.sendFile(__dirname+"/test.html")
 })
 
+//Set port 80 for production, 8080 for dev
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
@@ -68,11 +69,19 @@ var server = http.listen(80, function(){
 */
 
 var options = {
+	key: fs.readFileSync('keys/key.pem'),
+  	cert: fs.readFileSync('keys/cert.pem')
+}
+
+/*
+var options = {
 	key: fs.readFileSync('/etc/letsencrypt/live/www.citpad.com.ar/privkey.pem'),
   	cert: fs.readFileSync('/etc/letsencrypt/live/www.citpad.com.ar/fullchain.pem'),
   	ca: fs.readFileSync('/etc/letsencrypt/live/www.citpad.com.ar/chain.pem')
 }
+*/
 
+//Set por 443 for production, 4443 for dev
 var sserver = https.createServer(options, app).listen(443, function(){
 	console.log("Secure conction Established - HTTPS - SSL")
 })
